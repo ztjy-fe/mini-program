@@ -1,0 +1,78 @@
+// wxml 模板使用的方法
+var viewPublic = {
+    /**
+     * @intro 秒转时分秒格式
+     * @param seconds int s
+     * @return 00:00:00
+     */
+    secondsToFormatTime: function (seconds) {
+        var seconds = parseInt(seconds)
+        var min = Math.floor(seconds / 60)
+        var second = seconds % 60
+        var hour
+        var newMin
+        var time
+        if (min > 60) {
+            hour = Math.floor(min / 60);
+            newMin = min % 60;
+        }
+        if (second < 10) { second = '0' + second; }
+        if (min < 10) { min = '0' + min; }
+        return time = hour ? (hour + ':' + newMin + ':' + second) : (min + ':' + second);
+    },
+
+    /**
+     * @intro 数字大于 10000 转换成以 "万" 为单位
+     * @param num int or string
+     * @return tring 2.1万
+     */
+    numToTenThousand: function (num) {
+        var n = parseInt(num)
+        var w = parseInt(n / 10000)
+        var q = Math.round((n - w * 10000) / 1000)
+        if (n >= 10000) {
+            if (q == 10) {
+                w = w + 1
+                q = 0
+            }
+            n = w + q / 10 + '万'
+        }
+        return n
+    },
+
+    /**
+     * @intro 把http的url转换为https
+     * @param url
+     * @return https//:xxx
+     */
+    urlHttpTransform: function (url, num) {
+        // let strUrl
+        if (url.indexOf('snsimg.ztjystore') > -1 && url.indexOf('imageView') < 0) {
+            if (num == 'large') {
+                url = url.replace('.jpg', '.jpg?imageView2/0/w/690/h/388')
+                url = url.replace('.png', '.png?imageView2/0/w/690/h/388')
+            }
+            if (num == 'three') {
+                url = url.replace('.jpg', '.jpg?imageView2/0/w/224/h/146')
+                url = url.replace('.png', '.png?imageView2/0/w/690/h/388')
+                // strUrl = '.jpg?imageView2/0/w/224/h/146'
+            }
+            if (num == 'left') {
+                url = url.replace('.jpg', '.jpg?imageView2/0/w/224/h/116')
+                url = url.replace('.png', '.png?imageView2/0/w/224/h/116')
+            }
+            // url = url.replace('.jpg', strUrl)
+        }
+        if (url.indexOf('https') < 0) {
+            url = url.replace('http', 'https')
+        }
+        console.log(url)
+        return url
+    }
+}
+
+module.exports = {
+    secondsToFormatTime: viewPublic.secondsToFormatTime,
+    numToTenThousand: viewPublic.numToTenThousand,
+    urlHttpTransform: viewPublic.urlHttpTransform
+}

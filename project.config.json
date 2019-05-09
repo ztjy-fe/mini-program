@@ -1,0 +1,82 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx0696c7ed5502fbe0",
+	"projectname": "%E6%8E%8C%E9%80%9A%E5%AE%B6%E5%9B%AD%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "校园官网-主页",
+					"pathName": "pages/school/index/index",
+					"query": "schoolId=GByyPPIpBxWgf5jhley&showSchoolLabel=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "校园官网-相册",
+					"pathName": "pages/school/photo/photo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "入学咨询",
+					"pathName": "pages/school/consult/consult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "校园官网-主页",
+					"pathName": "pages/school/index/index",
+					"query": "schoolId=00d5567440297811e447&showSchoolLabel=true",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "文章详情页",
+					"pathName": "pages/article/article",
+					"query": "babyId=1344463b8c8b8e0cb865&contentId=ebee11e8b4a337cf8b1c&page=articleDetail&schoolId=GByyPPIpBxWgf5jhley&userId=fcac2264a9cb05efb43f&imgUrl=http%3A%2F%2Fsnsimg.ztjystore.cn%2Farticle%2F2018%2F11%2F19%2F1542626925705942.jpg%3FimageView2%2F2%2Fw%2F720",
+					"scene": null
+				}
+			]
+		}
+	}
+}

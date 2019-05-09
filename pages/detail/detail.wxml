@@ -1,0 +1,2 @@
+<!--pages/detail/detail.wxml-->
+<text>{{name}}的详情信息</text>

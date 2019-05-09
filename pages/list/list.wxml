@@ -1,0 +1,9 @@
+<!--pages/list/list.wxml-->
+<text>列表页</text>
+<view
+    class="item"
+    wx:for="{{list}}" wx:key="{{item.id}}"
+    data-name="{{item.name}}"
+    bindtap="handleLinkDetail">
+    {{item.name}}
+</view>

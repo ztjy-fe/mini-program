@@ -1,0 +1,11 @@
+.item {
+    width: 700rpx;
+    height: 80rpx;
+    margin: 20rpx auto;
+    background: #0099CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border-radius: 4rpx;
+}

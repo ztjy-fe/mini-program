@@ -1,0 +1,2 @@
+<text class="title">Hello world!</text>
+<button bindtap="handleLinkList">跳转列表页</button>
